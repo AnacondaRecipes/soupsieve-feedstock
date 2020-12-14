@@ -20,6 +20,7 @@ requirements:
   run:
     - python >=3.5
     - backports.functools_lru_cache  # [py<33]
+    - beautifulsoup4
 
 test:
   imports:
