@@ -32,7 +32,7 @@ test:
     - pip check
 
 about:
-  home: http://facelessuser.github.io/soupsieve
+  home: https://facelessuser.github.io/soupsieve
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
