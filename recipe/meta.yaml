@@ -10,17 +10,16 @@ source:
 
 build:
   number: 0
-  skip: True  # [py<36]
+  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - hatchling >=0.21.1
     - pip
-    - setuptools >=42
-    - wheel
+    - python
   run:
-    - python >=3.6
+    - python
 
 test:
   imports:
