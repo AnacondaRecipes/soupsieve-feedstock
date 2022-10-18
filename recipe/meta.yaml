@@ -25,7 +25,6 @@ test:
   imports:
     - soupsieve
   requires:
-    - python
     - pip
     - beautifulsoup4
   commands:
