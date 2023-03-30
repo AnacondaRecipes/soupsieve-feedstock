@@ -15,9 +15,10 @@ build:
 
 requirements:
   host:
-    - hatchling >=0.21.1
+    - hatchling 1.12.2
     - pip
     - python
+    - wheel
   run:
     - python
 
@@ -36,7 +37,6 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  license_url: https://github.com/facelessuser/soupsieve/blob/{{ version }}/LICENSE.md
   summary: A modern CSS selector implementation for BeautifulSoup
   description: |
       Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4.
@@ -45,7 +45,6 @@ about:
       through the latest CSS level 4 drafts and beyond (though some are not yet implemented).
   dev_url: https://github.com/facelessuser/soupsieve
   doc_url: https://facelessuser.github.io/soupsieve/
-  doc_source_url: https://github.com/facelessuser/soupsieve/blob/{{ version }}/LICENSE.md
 
 extra:
   recipe-maintainers:
