@@ -9,14 +9,14 @@ source:
   sha256: e28dba9ca6c7c00173e34e4ba57448f0688bb681b7c5e8bf4971daafc093d69a
 
 build:
-  number: 0
+  number: 1
   # trigger 1
   skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - hatchling 1.12.2
+    - hatchling 1.18
     - pip
     - python
     - wheel
