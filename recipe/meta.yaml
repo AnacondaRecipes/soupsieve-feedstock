@@ -1,4 +1,4 @@
-{% set version = "2.4" %}
+{% set version = "2.5" %}
 
 package:
   name: soupsieve
@@ -6,20 +6,18 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/soupsieve/soupsieve-{{ version }}.tar.gz
-  sha256: e28dba9ca6c7c00173e34e4ba57448f0688bb681b7c5e8bf4971daafc093d69a
+  sha256: 5663d5a7b3bfaeee0bc4372e7fc48f9cff4940b3eec54a6451cc5299f1097690
 
 build:
   number: 0
-  # trigger 1
-  skip: True  # [py<37]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: True  # [py<38]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   host:
-    - hatchling 1.12.2
+    - hatchling
     - pip
     - python
-    - wheel
   run:
     - python
 
