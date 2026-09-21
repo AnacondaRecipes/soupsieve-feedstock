@@ -23,14 +23,18 @@ requirements:
     - python
 
 test:
+  source_files:
+    - tests
   imports:
     - soupsieve
     - bs4
   requires:
     - pip
     - beautifulsoup4
+    - pytest
   commands:
     - pip check
+    - pytest -vv tests
 
 about:
   home: https://github.com/facelessuser/soupsieve
