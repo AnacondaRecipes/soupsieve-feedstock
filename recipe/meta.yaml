@@ -1,5 +1,5 @@
 {% set name = "soupsieve" %}
-{% set version = "2.9.2" %}
+{% set version = "4.1" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4a55d8cf158a9c2e587fa4922f1bbb91d68ac829e2d6f25403a85747c71daf74
+  sha256: ca9abf7126667010d8f6e9b39bfc1bc3b23c8aed9bcb0f54a754dde969bb8aab
 
 build:
   number: 0
-  skip: true  # [py<310]
+  skip: true  # [py<311]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
@@ -29,8 +29,10 @@ test:
     - soupsieve
     - bs4
   requires:
-    - pip
     - beautifulsoup4
+    - html5lib  # upstream dev test env; without the extra parsers ~150 tests self-skip
+    - lxml
+    - pip
     - pytest
   commands:
     - pip check
@@ -48,7 +50,7 @@ about:
     Soup Sieve currently provides selectors from the CSS level 1 specifications up
     through the latest CSS level 4 drafts and beyond (though some are not yet implemented).
   dev_url: https://github.com/facelessuser/soupsieve
-  doc_url: https://facelessuser.github.io/soupsieve/
+  doc_url: https://facelessuser.github.io/soupsieve
 
 extra:
   recipe-maintainers:
